@@ -5,27 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
     <title>Pokedex</title>
 </head>
 <body>
 
     <div class="main">
-        <h2>Pokedex</h2>
+        <div class="title_bg">
+            <h2>Pokedex</h2>
+        </div>
         <br>
-        <input id="quantidade" style="width: 100%; height:40px; padding-left: 10px;" type="text" name="quantidade" placeholder="Insira a quantidade de pokemons..." />
+        <div class="input_center">
+            <input id="quantidade" type="text" name="quantidade" placeholder="Insira a quantidade de pokemons..." />
+        </div>
         <div class="pokemon_boxes">                    
-     </div> <!--Pokemon_boxes-->
-
+        </div> <!--Pokemon_boxes-->
     </div>
-
-    <script>
+<script>
 
 
 var quantidade = document.getElementById('quantidade');
         quantidade.addEventListener('keyup',()=>{
             pegaPokemons(quantidade.value);
         })
-        pegaPokemons(2);
+        pegaPokemons(3);
 
         function pegaPokemons(quantidade){
             fetch('https://pokeapi.co/api/v2/pokemon?limit='+quantidade)
